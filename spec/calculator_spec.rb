@@ -30,5 +30,9 @@ describe Calculator do
       expect(calculator.int_add('1\n3\n3,3')).to eq(10)
     end
 
+    it 'should allow for the delimiter to be changed' do
+      expect(calculator.int_add('“//;\n1;2;4”')).to eq(7)
+    end
+
   end
 end

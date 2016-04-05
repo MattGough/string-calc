@@ -15,15 +15,19 @@ class Calculator
   end
 
   def split(numbers)
-    replace_new_lines(numbers).split(',')
+    change_delimiter?(numbers) ? replace_new_lines(numbers).split(';') : replace_new_lines(numbers).split(',')
   end
 
   def replace_new_lines(numbers)
-     numbers.gsub(/[\\n]/,',')
+    change_delimiter?(numbers) ? numbers.gsub(/[\\n]/,';') : numbers.gsub(/[\\n]/,',')
   end
 
   def empty?(numbers)
     numbers == ""
+  end
+
+  def change_delimiter?(numbers)
+    numbers.include? "//;"
   end
 
 end
