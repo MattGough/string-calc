@@ -15,7 +15,11 @@ class Calculator
   end
 
   def split(numbers)
-    numbers.split(',')
+    replace_new_lines(numbers).split(',')
+  end
+
+  def replace_new_lines(numbers)
+     numbers.gsub(/[\\n]/,',')
   end
 
   def empty?(numbers)

@@ -26,5 +26,9 @@ describe Calculator do
       expect(calculator.int_add("1,2,3,4,5,6,7,8,9,10")).to eq(55)
     end
 
+    it 'should accept and sum numbers on separate lines' do
+      expect(calculator.int_add('1\n3\n3,3')).to eq(10)
+    end
+
   end
 end
