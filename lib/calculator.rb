@@ -11,7 +11,7 @@ class Calculator
   end
 
   def to_array(numbers)
-    split(numbers).map { |number| number.to_i }
+    split(numbers).map(&:to_i)
   end
 
   def split(numbers)
