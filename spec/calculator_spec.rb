@@ -9,5 +9,9 @@ describe Calculator do
     it 'should return 0 when passed an empty string' do
       expect(calculator.int_add("")).to eq(0)
     end
+
+    it 'should return 2 when passed "2"' do
+      expect(calculator.int_add("2")).to eq(2)
+    end
   end
 end
