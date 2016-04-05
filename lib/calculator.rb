@@ -1,5 +1,5 @@
 class Calculator
 
-  def int_add
+  def int_add(numbers)
   end
 end
