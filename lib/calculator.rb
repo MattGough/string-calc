@@ -1,6 +1,6 @@
 class Calculator
 
-  def int_add(numbers)
+  def add(numbers)
     empty?(numbers) ? 0 : sum(numbers)
   end
 
