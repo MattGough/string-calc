@@ -17,5 +17,14 @@ describe Calculator do
     it 'should return the sum of two number passed in a string' do
       expect(calculator.int_add("4,5")).to eq(9)
     end
+
+    it 'should handle three input numbers' do
+      expect(calculator.int_add("1,6,7")).to eq(14)
+    end
+
+    it 'should handle 10 input numbers' do
+      expect(calculator.int_add("1,2,3,4,5,6,7,8,9,10")).to eq(55)
+    end
+
   end
 end
